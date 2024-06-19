@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.example.LAB2.grpc;
+
+import "google/protobuf/empty.proto";
+
+service GuestService {
+  rpc GetGuests (google.protobuf.Empty) returns (GetGuestsResponse);
+}
+
+message GuestEntity {
+  int32 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+}
+
+message GetGuestsResponse {
+  repeated GuestEntity guests = 1;
+}

@@ -1,0 +1,10 @@
+type Query {
+    getAllGuests: [Guest]
+    getGuestById(id: ID!): Guest
+}
+
+type Guest {
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
